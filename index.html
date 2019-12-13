@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      svg {
+        background-color: #eee;
+      }
+      svg path {
+        stroke-dasharray: 0;
+        stroke-width: 1;
+        stroke: rgb(0, 0, 0);
+        transform: scale(1, 1);
+        /* vector-effect: non-scaling-stroke; */
+      }
+    </style>
   </head>
   <body>
-    <img class="mama" src="https://s.cdpn.io/3/kiwi.svg" />
+    <svg width="410px" height="180px">
+      <path id="p1" fill="transparent" x="0.5px" y="0.5px"></path>
+    </svg>
+
+    <script>
+      var p1 = document.getElementById("p1");
+      var path =
+        "M-9.499999999999996,38.1 L-0.7000000000000025,36.4 L9.30000000000001,34.7 L19.299999999999926,33 L29.300000000000065,31.299999999999997 L39.300000000000146,29.6 L49.300000000000146,27.9 L59.29999999999995,26.200000000000003 L69.2999999999997,24.5 L79.2999999999997,22.799999999999997 L89.2999999999997,21.1 L99.2999999999997,19.4 L109.2999999999997,17.700000000000003 L119.29999999999977,16.1 L129.3000000000006,14.399999999999999M129.3000000000006,14.399999999999999 L140.5000000000006,14.399999999999999L131.35633333333334,14.399999999999999 L131.35633333333334,12.864406779661024 L142.02866666666665,11.169491525423723 L150.93816666666666,9.474576271186436 L151,9.474576271186436";
+      p1.setAttribute("d", path);
+    </script>
   </body>
 </html>
